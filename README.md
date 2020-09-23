@@ -28,6 +28,6 @@ uses: mattes/gce-docker-push-action@v1
 with:
   creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
   src: org/local-image:build
-  dst: gcr.io/my-project/my-image:latest
+  dst: gcr.io/my-project/my-image:${{github.run_number}}-${{github.sha}}
 ```
 
